@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.AOS.Runner.AOS_Login_Runner">
+      <class name="pdf.fetch_email">
         <methods>
-          <include name="openapp"/>
-          <include name="closeapp"/>
-          <include name="closeapp"/>
-          <include name="setup"/>
-          <include name="testLogin" invocation-numbers="1"/>
+          <include name="testFetchEmail"/>
         </methods>
-      </class> <!-- com.AOS.Runner.AOS_Login_Runner -->
+      </class> <!-- pdf.fetch_email -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
