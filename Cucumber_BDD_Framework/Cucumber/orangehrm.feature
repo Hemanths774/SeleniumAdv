@@ -6,4 +6,4 @@ When  I will enter the Un and pwd and click on login button
 Then 	Homepage should be displayed 
 And 	I will logout and close the browser
 
-# tags in feature file @all @smoke in the above example
+# tags in feature file @all @smoke in the above example..
