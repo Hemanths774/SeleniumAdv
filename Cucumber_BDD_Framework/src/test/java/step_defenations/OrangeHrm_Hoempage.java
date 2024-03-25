@@ -16,23 +16,27 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OrangeHrm_Hoempage {
 	public WebDriver driver;
-	@Before   // hook concept  in Cucumber
-	public void setup()
-	{
+//	@Before   // hook concept  in Cucumber
+//	public void setup()
+//	{
+//		WebDriverManager.chromedriver().setup();
+//		driver= new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//	}
+//	
+//	@After  // hook concept  in Cucumber
+//	public void teardown() throws InterruptedException
+//	{
+//		driver.quit();
+//	}
+	
+	@Given("I will open the browser and enter the url")
+	public void i_will_open_the_browser_and_enter_the_url() {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-	
-	@After  // hook concept  in Cucumber
-	public void teardown()
-	{
-		driver.quit();
-	}
-	
-	@Given("I will open the browser and enter the url")
-	public void i_will_open_the_browser_and_enter_the_url() {
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
@@ -57,6 +61,7 @@ public class OrangeHrm_Hoempage {
 	public void i_will_logout_and_close_the_browser() {
 		driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+		driver.quit();
 		
 	
 	    
